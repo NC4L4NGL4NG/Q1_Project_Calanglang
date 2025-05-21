@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Baggy!</title>
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Agdasima', sans-serif;
+    background: linear-gradient(to right, #ffd6ec, #ffe8f4);
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+}
+
+h1, h2, h4, h5, h6 {
+    margin: 0;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background: #ffcde1;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    font-size: 32px;
+    font-weight: bold;
+    color: #d63384;
+}
+
+.navlist {
+    display: flex;
+    gap: 20px;
+}
+
+.navlist a {
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.navlist a:hover {
+    color: #e83e8c;
+}
+
+.header-icons {
+    font-size: 24px;
+}
+
+/* Home */
+.home {
+    padding: 80px 20px;
+    text-align: center;
+    background: linear-gradient(to bottom, #fff0f5, #ffe4eb);
+}
+
+.home-text h1 {
+    font-size: 48px;
+    color: #d63384;
+}
+
+.home-text span {
+    color: #ff69b4;
+}
+
+.btn {
+    margin-top: 20px;
+    padding: 10px 25px;
+    background: #ff80aa;
+    color: white;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background: #ff4c8b;
+}
+
+/* Featured Section */
+.featured, .Featured-content {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.center-text h2 {
+    font-size: 36px;
+    color: #d63384;
+    margin-bottom: 20px;
+}
+
+.Row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.fea {
+    background: white;
+    border-radius: 16px;
+    padding: 15px;
+    width: 280px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.fea:hover {
+    transform: translateY(-10px);
+}
+
+.fea h5 {
+    font-size: 18px;
+    color: #e83e8c;
+    margin: 10px 0 5px;
+}
+
+.fea p {
+    font-size: 14px;
+}
+
+/* CTA */
+.cta {
+    background: #ffd6ec;
+    padding: 40px 20px;
+    text-align: center;
+    margin-top: 40px;
+    border-top: 3px solid #f8a2cc;
+}
+
+.cta h6 {
+    font-size: 18px;
+    color: #d63384;
+}
+
+.cta h4 {
+    font-size: 28px;
+    margin: 10px 0;
+}
+
+/* Contact */
+.contact {
+    background: #fff0f5;
+    padding: 40px 20px;
+}
+
+.main-contact, .main-contact ul {
+    margin-bottom: 20px;
+}
+
+.main-contact h3 {
+    font-size: 20px;
+    color: #d63384;
+    margin-bottom: 10px;
+}
+
+.main-contact a {
+    display: block;
+    padding: 4px 0;
+}
+
+/* Login Form */
+.container form {
+    background: white;
+    max-width: 400px;
+    margin: auto;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.container h4 {
+    text-align: center;
+    color: #d63384;
+}
+
+input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 8px;
+    margin: 10px 0;
+    border: 1px solid #ffc0cb;
+    border-radius: 6px;
+}
+
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background: #ff80aa;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+input[type="submit"]:hover {
+    background: #ff4c8b;
+}
+
+/* Footer */
+h4:last-of-type {
+    text-align: center;
+    margin: 40px 0 20px;
+    color: #888;
+}
+</style>
+</head>
+<body>
+	<!-- Header -->
+	<header>
+		<a href="#" class="logo">Baggy!</a>
+		<ul class="navlist"> 
+			<li><a href="#">Home</a></li>
+			<li><a href="#">Featured</a></li>
+			<li><a href="#">New</a></li>
+			<li><a href="#">Contact</a></li>
+		</ul>
+		<div class="header-icons">
+			<a href="#"><i class='bx bx-shopping-bag'></i></a> 
+			<div class="bx bx-menu" id="menu-icon"></div>
+		</div>
+	</header>
+
+	<!-- Home -->
+	<section class="home" id="home">
+		<div class="home-text">
+			<h1>Bags for <br><span>Girls</span></h1>
+			<p>New mini bags girls might like</p>
+			<a href="#" class="btn">Scroll to see more</a>
+		</div>
+	</section>
+
+	<!-- Featured -->
+	<section class="featured" id="featured">
+		<div class="center-text">
+			<h2>View Collection</h2>
+		</div>
+	</section>
+
+	<div class="Featured-content">
+		<div class="Row">
+			<div class="fea">
+				<img src="file:///C:/Users/Neriza/Downloads/41R1cb7pfcL._SL500_._AC_SL500_.jpg">
+				<h5>Pink Girl Bag</h5>
+				<p>View it!</p>
+				<a href="#"><i class='bx bx-right-arrow-alt'></i></a>
+			</div>
+
+			<div class="fea">
+				<img src="file:///C:/Users/Neriza/Downloads/7fc179d49892f8001ea5da6516fcfaba.png" width="500px">
+				<h5>Blue Flower Bag</h5>
+				<p>View it!</p>
+				<a href="#"><i class='bx bx-right-arrow-alt'></i></a>
+			</div>
+
+			<div class="fea">
+				<img src="file:///C:/Users/Neriza/Downloads/3562e0215ebb627216f48fb1423b9049.jpg" width="430px">
+				<h5>Luicucouourse Bag!</h5>
+				<p>View it!</p>
+				<a href="#"><i class='bx bx-right-arrow-alt'></i></a>
+			</div>
+
+			<div class="fea">
+				<img src="file:///C:/Users/Neriza/Downloads/240cb1edc26016a5ba0d256b15723f02.jpg" width="430px">
+				<h5>Jirai Kei Pink Bag!</h5>
+				<p>View it!</p>
+				<a href="#"><i class='bx bx-right-arrow-alt'></i></a>
+			</div>
+
+			<div class="fea">
+				<img src="file:///C:/Users/Neriza/Downloads/f58a049534c4cb48f97e7f889b66f67c.jpg" width="430px">
+				<h5>Kitty Bag!</h5>
+				<p>View it!</p>
+				<a href="#"><i class='bx bx-right-arrow-alt'></i></a>
+			</div>
+
+			<div class="fea">
+				<img src="file:///C:/Users/Neriza/Downloads/e36170cd48754e78ab32019f1a5c1102.jpg" width="430px">
+				<h5>Juicy Couture Bag</h5>
+				<p>View it!</p>
+				<a href="#"><i class='bx bx-right-arrow-alt'></i></a>
+			</div>
+
+			<div class="fea">
+				<img src="https://i.pinimg.com/736x/b9/d2/5d/b9d25dc4d240d772f33f6df136ee2994.jpg" width="430px">
+				<h5>Crochet Star Bag</h5>
+				<p>View it!</p>
+				<a href="#"><i class='bx bx-right-arrow-alt'></i></a>
+			</div>
+		</div>
+	</div>
+
+	<!-- CTA -->
+	<section class="cta">
+		<div class="cta-text">
+			<h6>MORE COMING SOON</h6>
+			<h4>20% OFF<br>COMING SOON</h4>
+			<a href="#" class="btn">Shop Now!</a>
+		</div>
+	</section>
+
+	<!-- Contact -->
+	<section class="contact" id="contact">
+		<div class="main-contact">
+			<h3>Baggy</h3>
+			<h5>Contact Us For Problems!</h5>
+			<div class="icons">
+				<a href="#"><i class='bx bxl-instagram'></i></a>
+				<a href="#"><i class='bx bxl-facebook-circle'></i></a>
+				<a href="#"><i class='bx bxl-gmail'></i></a>
+			</div>
+		</div>
+
+		<div class="main-contact">
+			<h3>Explore</h3>
+			<ul class="navlist"> 
+				<li><a href="#">Home</a></li>
+				<li><a href="#">Featured</a></li>
+				<li><a href="#">New</a></li>
+				<li><a href="#">Contact</a></li>
+			</ul>
+		</div>
+
+		<div class="main-contact">
+			<h3>Shopping</h3>
+			<ul>
+				<li><a href="#">Clothing Store</a></li>
+				<li><a href="#">Trending Shoes</a></li>
+				<li><a href="#">Accessories</a></li>
+				<li><a href="#">Sale</a></li>
+			</ul>
+		</div>
+	</section>
+
+	<!-- Login -->
+	<div class="container">
+		<form>
+			<h4>LOGIN TO PURCHASE NOW!</h4>
+			<label>Username:</label>
+			<input type="text"><br />
+			<label>Password:</label>
+			<input type="password"><br />
+			<input type="submit" value="login">
+		</form>
+	</div>
+
+	<h4>Copyright 2024 ©</h4>
+
+	<!-- JS -->
+	<script src="js/script.js"></script>
+</body>
